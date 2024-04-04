@@ -1,0 +1,12 @@
+{
+  "name": "yj4-tweeter-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "cd client && npm ci && npm run build && rm -rf ../server/build && mv build ../server",
+    "start": "cd server && npm ci && npm run build && npm start"
+  },
+  "author": "",
+  "license": "ISC"
+}

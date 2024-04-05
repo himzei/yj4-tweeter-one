@@ -45,6 +45,7 @@ app.use(
     store: new MongoStore({ mongoUrl: process.env.DB_URL + "/yj4-twitter" }),
   })
 );
+
 app.use(express.static("build"));
 
 // 서브라우팅

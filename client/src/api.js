@@ -1,4 +1,4 @@
-const BASE_URL = "";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 // 회원가입
 export async function apiPostRegister(data) {

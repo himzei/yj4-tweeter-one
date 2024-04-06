@@ -49,7 +49,7 @@ app.use(
 app.use(express.static("build"));
 
 // 서브라우팅
-app.get("/", (req, res) => res.sendfile(__dirname + "/build/index.html"));
+app.get("/", (req, res) => res.sendfile(__dirname + "/index.html"));
 app.use("/users", userRouter); // 회원가입, 로그인, 카카오로그인
 app.use("/tweets", upload.single("file"), tweetRouter); // 글쓰기, 수정, 삭제, 읽기, 댓글
 

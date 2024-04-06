@@ -9,6 +9,7 @@ export default function Socials() {
   };
   const params = new URLSearchParams(config).toString();
   const finalUrl = `${kakaoUrl}?${params}`;
+  console.log(finalUrl);
   return (
     <div className="flex flex-col gap-6">
       <div className="w-full h-px bg-neutral-300" />

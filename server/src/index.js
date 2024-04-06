@@ -9,6 +9,7 @@ import userRouter from "./routers/userRouter";
 import tweetRouter from "./routers/tweetRouter";
 import multer from "multer";
 import cookieParser from "cookie-parser";
+import path from "path";
 
 // const upload = multer({ dest: "uploads/" });
 // console.log(process.env.NODE_ENV === "production");
@@ -49,7 +50,7 @@ app.use(
 app.use(express.static("build"));
 
 // 서브라우팅
-app.get("/", (req, res) => res.sendfile(__dirname + "/index.html"));
+app.get("/", (req, res) => res.sendFile(path.join(__dirname, "/index.html")));
 app.use("/users", userRouter); // 회원가입, 로그인, 카카오로그인
 app.use("/tweets", upload.single("file"), tweetRouter); // 글쓰기, 수정, 삭제, 읽기, 댓글
 
